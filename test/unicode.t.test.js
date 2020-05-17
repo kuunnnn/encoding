@@ -1,12 +1,10 @@
 const {
   toUtf16Be,
-  toUtf16Be,
   toUtf16Le,
   toUtf32Be,
   toUtf32Le,
   toUtf8
 } = require("../lib/unicode.t");
-
 describe("unicode.t", () => {
   test("to-utf8", () => {
     expect(toUtf8(0x0041)).toEqual([0x41]);

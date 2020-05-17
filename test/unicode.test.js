@@ -10,6 +10,7 @@ const {
   stringToUtf32LeBytes,
   stringToUtf8Bytes
 } = require("../lib/unicode");
+const fCodePoint = String.fromCodePoint;
 describe("encode-string-prefix", () => {
   test("to-utf8", () => {
     expect(stringToUtf8Bytes(fCodePoint(0xf))).toEqual([0xef, 0xbb, 0xbf, 0xf]);
